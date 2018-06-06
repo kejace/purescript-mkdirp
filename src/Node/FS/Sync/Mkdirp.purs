@@ -1,11 +1,8 @@
 module Node.FS.Sync.Mkdirp (mkdirp) where
 
 import Prelude
-import Control.Monad.Eff (Eff)
-import Node.FS (FS)
-
+import Effect (Effect)
 
 foreign import mkdirp
-  ∷ ∀ eff
-  . String
-  → Eff (fs :: FS | eff) Unit
+  ∷ String
+  → Effect Unit
